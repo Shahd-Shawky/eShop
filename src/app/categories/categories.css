@@ -1,0 +1,52 @@
+.circle-section{
+    padding: 70px 8%;
+    text-align: center;
+    background: #faf7f2;
+}
+
+.circe-section h2{
+    font-size: 36px;
+    margin-bottom: 0px 0 40px;
+}
+
+.circle-grid{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.circle-item{
+    width:140px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.circle-item:hover{
+    transform: translateY(-6px);
+}
+
+.circle-image{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: #eaeaea;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.circle-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.circle-item h4{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.circle-item span{
+    font-size: 13px;
+    color: #888;
+}
