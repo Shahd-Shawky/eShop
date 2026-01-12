@@ -4,10 +4,12 @@ import { Header } from "./header/header";
 import { HeroBanner } from "./hero-banner/hero-banner";
 import { Categories } from "./categories/categories";
 import { Footer } from "./footer/footer";
+import { SignIn } from "./sign-in/sign-in";
+import { SignUp } from "./sign-up/sign-up";
 
 @Component({
   selector: 'app-root',
-  imports: [Header, HeroBanner, Categories, Footer],
+  imports: [Header, HeroBanner, Categories, Footer, SignIn, SignUp, RouterOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css',
   standalone: true,

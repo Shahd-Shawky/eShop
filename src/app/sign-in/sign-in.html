@@ -1,7 +1,6 @@
 <h2>SignIn</h2>
 
 <form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
-
     <div>
         <input 
         type="email"
@@ -25,26 +24,17 @@
         formControlName="password"
         />
 
-        <!-- <small *ngIf="signInForm.get('Password')?.touched"
-        && signinForm.get('password')?.invalid">
-        <span *ngIf="signInForm.get('password')?.errors?.['required']">
+        <small *ngIf="signInForm.get('password')?.touched 
+        && signInForm.get('password')?.invalid">
+        <span
+        *ngIf="signInForm.get('password')?.errors?.['required']">
             Password is required.
         </span>
-        <span *ngIf="signInForm.get('password')?.errors?.['minlength']">
+        <span
+        *ngIf="signInForm.get('password')?.errors?.['minlength']">
             Password must be at least 6 characters long.
         </span>
         </small>
-    </div> -->
-
-    <small *ngIf="signInForm.get('Password')?.touched"
-    && signInForm.get('password')?.invalid">
-        <span *ngIf="signInForm.get('password')?.errors?.['required']">
-            Password is required.
-        </span>
-        <span *ngIf="signInForm.get('password')?.errors?.['minlength']">
-            Password must be at least 6 characters long.
-        </span>
-    </small>
     </div>
 
     <button type="submit" [disabled]="signInForm.invalid">

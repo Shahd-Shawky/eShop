@@ -1,11 +1,41 @@
 import { Component } from '@angular/core';
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+  AbstractControl,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up',
-  imports: [],
+  imports: [ReactiveFormsModule],
   templateUrl: './sign-up.html',
   styleUrl: './sign-up.css',
 })
 export class SignUp {
+  signupForm: FormGroup;
 
-}
+  constructor(private formBuilder: FormBuilder) {
+    this.signupForm = this.formBuilder.group({
+      username: ['', [Validators.required, Validators.minLength(4)]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      confirmPassword: ['', [Validators.required]],
+    }, { validators: this.passwordMatchValidator });
+  }
+
+  passwordMatchValidator(form: AbstractControl) {
+    const password = form.get('password')?.value;
+    const confirmPassword = form.get('confirmPassword')?.value;
+    return password === confirmPassword ? null : { mismatch: true };
+  }
+
+  onSubmit() {
+    if (this.signupForm.valid) {
+      this.signupForm.markAllAsTouched();
+      return;
+    }
+    console.log('Form Submitted', this.signupForm.value);
+  }
+  }

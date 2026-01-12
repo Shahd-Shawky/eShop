@@ -1,1 +1,36 @@
-<p>sign-up works!</p>
+<h2>Create Account</h2>
+
+<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+
+    <div>
+        <input formContorlName="name" placeholder="Name" />
+        <small *ngIf="name.invalid && (name.dirty || name.touched)">
+            Name must be at least 3 characters long.
+        </small>
+    </div>
+
+    <div>
+        <input type="password" formControlName="password" placeholder="Password" />
+        <small *ngIf="password.invalid && (password.dirty || password.touched)">
+            Minimum 6 characters required.
+        </small>
+    </div>
+
+    <div>
+        <input 
+        type="password"
+        formContorlName="confirmPassword"
+        placeholder="Confirm Password" 
+        />
+    </div>
+
+    <small *ngIf="signupForm.errors?.['passwordMismatch'] &&
+    signupForm.get('confirmPassword')?.touched">
+        Passwords do not match.
+    </small>
+
+    <button type="submit" [disabled]="signupForm.invalid">
+        Sign Up
+    </button>
+
+</form>

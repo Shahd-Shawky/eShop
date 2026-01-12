@@ -1,8 +1,11 @@
 import { Component } from '@angular/core';
+import { HeroBanner } from "../hero-banner/hero-banner";
+import { Categories } from '../categories/categories';
+import { Footer } from '../footer/footer';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  imports: [HeroBanner, Categories, Footer],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
