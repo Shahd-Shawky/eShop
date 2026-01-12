@@ -5,7 +5,7 @@
     <div class="circle-grid">
         <div class="circle-item" *ngFor="let c of categories">
             <div class="circle-image">
-                <img [src]="'assets/' + c.image" [alt]="c.name" />
+                <img [src]="c.image" [alt]="c.name" />
             </div>
 
             <h4>{{ c.name }}</h4>

@@ -1,1 +1,56 @@
-<p>sign-in works!</p>
+<h2>SignIn</h2>
+
+<form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+
+    <div>
+        <input 
+        type="email"
+        placeholder="Email"
+        formControlName="email"
+        />
+
+        <small *ngIf="signInForm.get('email')?.touched 
+        && signInForm.get('email')?.invalid">
+        <span 
+        *ngIf="signInForm.get('email')?.errors?.['required']">
+            Email is required.
+        </span>
+        </small>
+    </div>
+
+    <div>
+        <input 
+        type="password"
+        placeholder="Password"
+        formControlName="password"
+        />
+
+        <!-- <small *ngIf="signInForm.get('Password')?.touched"
+        && signinForm.get('password')?.invalid">
+        <span *ngIf="signInForm.get('password')?.errors?.['required']">
+            Password is required.
+        </span>
+        <span *ngIf="signInForm.get('password')?.errors?.['minlength']">
+            Password must be at least 6 characters long.
+        </span>
+        </small>
+    </div> -->
+
+    <small *ngIf="signInForm.get('Password')?.touched"
+    && signInForm.get('password')?.invalid">
+        <span *ngIf="signInForm.get('password')?.errors?.['required']">
+            Password is required.
+        </span>
+        <span *ngIf="signInForm.get('password')?.errors?.['minlength']">
+            Password must be at least 6 characters long.
+        </span>
+    </small>
+    </div>
+
+    <button type="submit" [disabled]="signInForm.invalid">
+        Sign In
+    </button>
+
+    <button [disabled]="signInForm.invalid">SignIn</button>
+
+</form>

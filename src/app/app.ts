@@ -10,7 +10,9 @@ import { Footer } from "./footer/footer";
   imports: [Header, HeroBanner, Categories, Footer],
   templateUrl: './app.html',
   styleUrl: './app.css',
+  standalone: true,
 })
+
 export class App {
   protected readonly title = signal('eShop');
 }

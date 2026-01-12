@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterLink } from "@angular/router";
+import { CommonModule } from "@angular/common";
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-footer',
-  imports: [RouterLink],
+  imports: [],
+  // templateUrl: './footer.html',
   templateUrl: './footer.html',
   styleUrl: './footer.css',
 })
