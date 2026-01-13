@@ -24,11 +24,10 @@ export class SignIn {
   }
 
   onSubmit() {
-    if (this.signInForm.valid) {
+    if (this.signInForm.invalid) {
       this.signInForm.markAllAsTouched();
       return;
     }
     console.log(this.signInForm.value);
   }
-
 }

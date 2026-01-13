@@ -6,7 +6,6 @@ import { NgFor } from '@angular/common';
 @Component({
   selector: 'app-footer',
   imports: [],
-  // templateUrl: './footer.html',
   templateUrl: './footer.html',
   styleUrl: './footer.css',
 })

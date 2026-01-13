@@ -1,15 +1,18 @@
 <section class="circle-section">
-    <h2>Explore our Categories</h2>
-    <p class="subtitle">Lets explore the new trends together</p>
+  <h2>Explore our Categories</h2>
+  <p class="subtitle">Lets explore the new trends together</p>
 
-    <div class="circle-grid">
-        <div class="circle-item" *ngFor="let c of categories">
-            <div class="circle-image">
-                <img [src]="c.image" [alt]="c.name" />
-            </div>
+  <div class="circle-grid">
+    <div
+      class="circle-item"
+      *ngFor="let c of categories"
+    >
+      <div class="circle-image">
+        <img [src]="c.image" [alt]="c.name" />
+      </div>
 
-            <h4>{{ c.name }}</h4>
-            <!-- <p>{{ c.products }} Products</p> -->
-        </div>
+      <h4>{{ c.name }}</h4>
+      <!-- <p>{{ c.products }} Products</p> -->
     </div>
+  </div>
 </section>

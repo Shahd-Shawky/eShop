@@ -1,5 +1,5 @@
 .eShop-header{
-    background-color: #343a40;
+    /* background-color: #343a40; */
     padding: 10px 0;
     color: white;
     text-align: center;
@@ -62,3 +62,56 @@
   background-color: #0056b3;
 }
 
+/* Small Tablet */
+@media (min-width: 480px) {
+  .btn{
+    padding: 8px 14px;
+    font-size: 15px;
+  }
+
+  .cart{
+    font-size: 18px;
+  }
+}
+
+/* tablet */
+@media (min-width: 768px) {
+  .btn{
+    padding: 10px 18px;
+    font-size: 16px;
+  }
+
+  .cart{
+    font-size: 20px;
+  }
+
+  .nav-links {
+    gap: 20px;
+    display: flex;
+  }
+
+  .nav-links a{
+    font-size: 18px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .btn{
+    padding: 12px 20px;
+    font-size: 18px;
+  }
+
+  .cart{
+    font-size: 22px;
+  }
+
+  .nav-links {
+    gap: 25px;
+    display: flex;
+  }
+
+  .nav-links a{
+    font-size: 20px;
+  }
+}

@@ -4,9 +4,11 @@
 
     <div>
         <input formContorlName="name" placeholder="Name" />
-        <small *ngIf="name.invalid && (name.dirty || name.touched)">
-            Name must be at least 3 characters long.
-        </small>
+        <small *ngIf="signupForm.get('name')?.invalid &&
+        (signupForm.get('name')?.dirty || signupForm.get('name')?.touched)"
+        >
+        Name must be at least 3 characters long.
+    </small>
     </div>
 
     <div>
