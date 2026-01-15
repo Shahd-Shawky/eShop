@@ -11,7 +11,7 @@ import {
 
 @Component({
   selector: 'app-sign-up',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './sign-up.html',
   styleUrl: './sign-up.css',
 })

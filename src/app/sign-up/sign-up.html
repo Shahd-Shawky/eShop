@@ -1,38 +1,24 @@
-<h2>Create Account</h2>
+<form>
+    
+<div class="form-card">
+    <h2>Registration</h2>
 
-<form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
-
-    <div>
-        <input formContorlName="name" placeholder="Name" />
-        <small *ngIf="signupForm.get('name')?.invalid &&
-        (signupForm.get('name')?.dirty || signupForm.get('name')?.touched)"
-        >
-        Name must be at least 3 characters long.
-    </small>
+    <div class="input-group">
+        <i></i>
+        <input placeholder="name">
     </div>
 
-    <div>
-        <input type="password" formControlName="password" placeholder="Password" />
-        <small *ngIf="password.invalid && (password.dirty || password.touched)">
-            Minimum 6 characters required.
-        </small>
+    <div class="input-group">
+        <i></i>
+        <input type="password" placeholder="password">
     </div>
 
-    <div>
-        <input 
-        type="password"
-        formContorlName="confirmPassword"
-        placeholder="Confirm Password" 
-        />
+    <div class="input-group">
+        <i></i>
+        <input type="password" placeholder="confirm password">
     </div>
 
-    <small *ngIf="signupForm.errors?.['passwordMismatch'] &&
-    signupForm.get('confirmPassword')?.touched">
-        Passwords do not match.
-    </small>
-
-    <button type="submit" [disabled]="signupForm.invalid">
-        Sign Up
-    </button>
+    <button class="btn">Sign Up</button>
+</div>
 
 </form>

@@ -82,6 +82,8 @@
     color: #fff;
     border-radius: 0 6px 6px 0;
     cursor: pointer;
+    min-height: 44px;
+    min-width: 44px;
 }
 
 .email {
