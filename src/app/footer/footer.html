@@ -1,48 +1,54 @@
 <footer class="footer">
+  <div class="footer-container">
 
-    <div class="footer-container">
-        <div class="footer-col brand">
-            <h3 logo>eShop</h3>
-            <p>Your one-stop shop for all your needs.</p>
-            
-            <div class="socials">
-                <i class="icon">f</i>
-                <i class="icon">t</i>
-                <i class="icon">i</i>
-                <i class="icon">y</i>
-            </div>
-        </div>
+    <section class="footer-col brand">
+      <h3 class="footer-title">eShop</h3>
+      <p>Your one-stop shop for all your needs.</p>
+    </section>
 
-        <div class="footer-col">
-            <h4>Quick Links</h4>
-            <ul>
-                <!-- <li *ngFor ="let link of quicklinks">
-                    <a [routerLink]="link.path">{{ link.display }}</a>
-                </li> -->
-            </ul>
-        </div>
+    <section class="footer-col">
+      <h3 class="footer-title">Quick Links</h3>
+      <ul>
+        <li *ngFor="let link of quickLinks">
+          <a [routerLink]="link.path">
+            {{ link.display }}
+          </a>
+        </li>
+      </ul>
+    </section>
 
-        <div class="footer-col">
-            <h4>Customer Service</h4>
-            <ul>
-                <!-- <li *ngFor ="let link of customerservice">
-                    <a [routerLink]="link.path">{{ link.display }}</a>
-                </li> -->
-            </ul>
-        </div>
+    <section class="footer-col">
+      <h3 class="footer-title">Customer Service</h3>
+      <ul>
+        <li *ngFor="let link of customerService">
+          <a [routerLink]="link.path">
+            {{ link.display }}
+          </a>
+        </li>
+      </ul>
+    </section>
+    
+    <section class="footer-col">
+      <h3 class="footer-title">Stay Connected</h3>
 
-        <div class="footer-col">
-            <h4>Stay conected to us</h4>
-            <p>Subscribe to our newsletter for the latest updates and offers.</p>
+      <p>
+        Subscribe to our newsletter for the latest updates and offers.
+      </p>
 
-            <div class="newsletter-input">
-                <input type="email" placeholder="Enter your email" />
-                <button type="submit">Subscribe</button>
-            </div>
+      <form class="newsletter-input" aria-label="Newsletter subscription">
+        <input
+          type="email"
+          placeholder="Enter your email"
+          aria-label="Email address"
+          required
+        />
+        <button type="submit">Subscribe</button>
+      </form>
 
-            <span class="email">support@eShop.com</span>
-        </div>
+      <p class="email">
+        <a href="mailto:support@eshop.com">support@eshop.com</a>
+      </p>
+    </section>
 
-    </div>
-
+  </div>
 </footer>

@@ -1,10 +1,9 @@
-<section class="clothes-page">
-    
-    <div class="content">
-        <h1>Clothes Category</h1>
-        <p class="description">
-            Explore our wide range of clothing options for all styles and occasions.
-        </p>
+<div *ngIf="isLoading">Loading</div>
 
+<div class="clothes-grid" *ngIf="!isLoading">
+    <div class="card" *ngFor="let item of clothes">
+        <img src="assets/images/clothes.jpg" alt="Clothes Image" class="card-image" />
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.price }}</p>
     </div>
-</section>
+</div>
