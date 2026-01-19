@@ -7,7 +7,7 @@ import { NgFor } from '@angular/common';
   selector: 'app-footer',
   imports: [RouterLink],
   templateUrl: './footer.html',
-  styleUrl: './footer.css',
+  styleUrls: ['./footer.css'],
 })
 export class Footer {
   quickLinks = [

@@ -1,5 +1,4 @@
 .eShop-header{
-    /* background-color: #343a40; */
     padding: 10px 0;
     color: white;
     text-align: center;
@@ -28,6 +27,8 @@
   list-style: none;
   display: flex;
   gap: 20px;
+  min-width: 44px;
+  max-width: 44px;
 }
 
 .nav-links li a{
