@@ -78,17 +78,19 @@
 .newsletter-input button {
     padding: 10px 16px;
     border: none;
-    background: #ff7a00;
     color: #fff;
     border-radius: 0 6px 6px 0;
     cursor: pointer;
     min-width: 44px; 
     min-height: 44px;
+    /* text-color: #ffffff; */
+    background-color: #ff7a00;
 }
 
 .email {
     font-size: 13px;
-    color: #777;
+    background-color: #f8f9fa ;
+    /* color: #777; */
     min-width: 44px; 
     min-height: 44px;
 }
