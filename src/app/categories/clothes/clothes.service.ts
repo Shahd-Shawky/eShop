@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ClothesService {
-    private apiUrl = 'https://thenewblack.ai/api/1.1/wf/clothing?api_key=YOUR_API_KEY';
+    private apiUrl = 'https://fakestoreapi.com/products';
 
     constructor(private http: HttpClient) {}
 

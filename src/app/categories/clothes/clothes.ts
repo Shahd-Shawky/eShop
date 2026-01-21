@@ -1,9 +1,11 @@
 // import { Component, OnInit } from '@angular/core';
+// import { CommonModule } from '@angular/common';
 // import { ClothesService } from './clothes.service';
 
 // @Component({
 //   selector: 'app-clothes',
-//   imports: [],
+//   standalone: true,
+//   imports: [CommonModule],
 //   templateUrl: './clothes.html',
 //   styleUrls: ['./clothes.css'],
 // })
@@ -15,19 +17,15 @@
 
 //   ngOnInit(): void {
 //     this.clothesService.getClothes().subscribe({
-//       next: (data) => {
-//         // this.clothes = data;
+//       next: () => {
 //         this.isLoading = false;
 //       },
-//       error: (err) => {
-//         console.error('Error fetching clothes data:', err);
+//       error: () => {
 //         this.isLoading = false;
 //       }
-//     })
+//     });
 //   }
-
 // }
-
 
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -41,19 +39,20 @@ import { ClothesService } from './clothes.service';
   styleUrls: ['./clothes.css'],
 })
 export class Clothes implements OnInit {
-  clothes: Clothes[] = [];
+  clothes: any[] = [];
   isLoading = true;
 
   constructor(private clothesService: ClothesService) {}
 
   ngOnInit(): void {
     this.clothesService.getClothes().subscribe({
-      next: () => {
+      next: (data) => {
+        this.clothes = data;
         this.isLoading = false;
       },
       error: () => {
         this.isLoading = false;
-      }
+      },
     });
   }
 }
