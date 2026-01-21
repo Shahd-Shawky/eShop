@@ -7,11 +7,12 @@ import {
   ReactiveFormsModule,
   Validators,
   AbstractControl,
+  FormsModule,
 } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up',
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [ReactiveFormsModule, CommonModule, FormsModule],
   templateUrl: './sign-up.html',
   styleUrl: './sign-up.css',
 })

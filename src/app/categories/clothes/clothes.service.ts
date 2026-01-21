@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ClothesService {
-    private apiUrl = 'https://api.example.com/clothes';
+    private apiUrl = 'https://thenewblack.ai/api/1.1/wf/clothing?api_key=YOUR_API_KEY';
 
     constructor(private http: HttpClient) {}
 

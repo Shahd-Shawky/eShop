@@ -3,12 +3,13 @@ import { Component } from '@angular/core';
 import { 
   FormBuilder, 
   FormGroup, 
+  FormsModule, 
   ReactiveFormsModule, 
   Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-in',
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule],
   templateUrl: './sign-in.html',
   styleUrl: './sign-in.css',
 })
