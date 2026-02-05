@@ -10,10 +10,10 @@ import {
 @Component({
   selector: 'app-sign-in',
   imports: [CommonModule, ReactiveFormsModule, FormsModule],
-  templateUrl: './sign-in.html',
-  styleUrl: './sign-in.css',
+  templateUrl: './signin.html',
+  styleUrl: './signin.css',
 })
-export class SignIn {
+export class signin {
 
   signInForm: FormGroup;
 

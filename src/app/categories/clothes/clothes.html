@@ -1,9 +1,21 @@
-<div *ngIf="isLoading">Loading...</div>
+@if (isLoading()) {
+  <div >Loading...</div> 
+}
+@else {
+<div class="clothes-grid">
+  @for (item of clothes; track $index) {
+  <div class="card" >
+    <img
+      [src]="item.images"
+      [alt]="item.title"
+    />
 
-<div class="clothes-grid" *ngIf="!isLoading">
-  <div class="card" *ngFor="let item of clothes">
-    <img [src]="item.image" [alt]="item.title" />
-    <h3>{{ item.title }}</h3>
-    <p>${{ item.price }}</p>
+    <span class="price">${{ item.price }}</span>
+    <h3 class="title">{{ item.title }}</h3>
+
+    <button (click)="onAddToCart(item)">Add to Cart</button>
   </div>
+  }
+
 </div>
+}

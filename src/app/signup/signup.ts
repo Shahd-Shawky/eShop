@@ -13,10 +13,10 @@ import {
 @Component({
   selector: 'app-sign-up',
   imports: [ReactiveFormsModule, CommonModule, FormsModule],
-  templateUrl: './sign-up.html',
-  styleUrl: './sign-up.css',
+  templateUrl: './signup.html',
+  styleUrl: './signup.css',
 })
-export class SignUp {
+export class signup {
   signupForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {

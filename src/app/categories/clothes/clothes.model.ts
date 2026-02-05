@@ -1,8 +1,8 @@
-export interface Clothes {
+export interface clothes {
   id: number;
-  name: string;
-  size: string;
-  color: string;
+  title: string;
   price: number;
-  inStock: boolean;
+  description: string;
+  images: string[];
+  category: { id: number; name: string; image: string };
 }
